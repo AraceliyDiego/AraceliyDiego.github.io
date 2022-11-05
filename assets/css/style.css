@@ -1,0 +1,478 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #3F0B01;
+}
+
+@font-face {
+  font-family: "Hobbiton";
+  src: url(../fonts/hobbitonbrushhand.ttf);
+}
+@font-face {
+  font-family: "Roboto Medium";
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+#header {
+  height: 80px;
+  position: relative;
+  z-index: 10;
+}
+#header nav {
+  height: 80px;
+  width: 100%;
+}
+#header .enlace {
+  position: absolute;
+  padding: 20px 50px;
+}
+#header nav ul {
+  float: right;
+  margin-right: 20px;
+}
+#header nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+#header nav ul li a {
+  color: #3F0B01;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+#header nav ul li a:hover {
+  transition: .5s;
+  color: #F1D975;
+} 
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 1336px) {
+  .enlace {
+    padding-left: 20px;
+  }
+  nav ul li a {
+    font-size: 16px!important;
+    padding: 7px 2px!important;
+  }
+}
+
+@media (max-width: 991px) {
+  /*.checkbtn {
+    display: block;
+  }*/
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    backdrop-filter: blur(4px);
+  }
+  nav ul li {
+    display: block!important;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    color: white!important;
+  }
+  li a:hover {
+    background: none;
+    color: #F1D975;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/bg.jpeg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: -80px;
+  z-index: 9;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 156px;
+  color: #3F0B01;
+  font-family: "Hobbiton";
+  letter-spacing: 8px;
+}
+
+#hero h2 {
+  color: #3F0B01;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 70px;
+  font-family: "Hobbiton";
+  letter-spacing: 8px;
+}
+
+#hero h3 {
+  color: #3F0B01;
+  margin-top: 40px;
+  font-size: 22px;
+  font-family: "Roboto";
+}
+
+#hero .countdown {
+  margin-bottom: 0px;
+}
+
+#hero .countdown div {
+  text-align: center;
+  border: 2px solid #3F0B01;
+  border-radius: 10px;
+  margin: 10px 10px;
+  width: 180px;
+  padding: 10px;
+}
+
+#hero .countdown div h4 {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-family: "Roboto Medium";
+}
+
+#hero .countdown div h5 {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Roboto";
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Contact Us
+--------------------------------------------------------------*/
+#contact {
+  width: 100%;
+  background: url("../img/datosbg.jpeg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.contact .info {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  padding: 15% 5% 8% 10%;
+}
+
+.contact .direccion img {
+  color: #fff;
+  float: left;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h5 {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Hobbiton";
+  letter-spacing: 8px;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: white;
+  font-family: "Roboto";
+}
+
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: white;
+  font-family: "Roboto";
+}
+.nopadding .col-lg-6 {
+  padding: 0;
+}
+.mesaregalos {
+  margin-top: 100px;
+}
+
+.mesaregalos h3 {
+  color: white;
+  font-weight: 400;
+  font-family: "Hobbiton";
+  letter-spacing: 8px;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.mesas h4, .mesas p {
+  color: white;
+}
+
+.mesas h4 {
+  font-size: 21px;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+
+.mesas p {
+  font-size: 18px;
+  margin-top: 0px;
+}
+
+.mesas a {
+  color: #3F0B01;
+  text-transform: uppercase;
+  font-size: 14px;
+  background: #C2AD4F;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 5px 20px;
+}
+
+.mesas a:hover {
+  color: white;
+  background: #3F0B01;
+}
+
+.mesas {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.blurcard {
+  backdrop-filter: blur(4px);
+}
+.direccion span {
+  text-transform: uppercase;
+}
+/*--------------------------------------------------------------
+# Hashtag
+--------------------------------------------------------------*/
+#hashtag {
+  width: 100%;
+  background: url("../img/bg.jpeg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#hashtag h3 {
+  color: #3F0B01;
+  font-weight: 400;
+  font-family: "Hobbiton";
+  letter-spacing: 8px;
+  font-size: 36px;
+}
+/*--------------------------------------------------------------
+# Confirmacion
+--------------------------------------------------------------*/
+#confirmacion {
+  width: 100%;
+  background: url("../img/confirmarbg.jpeg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+.gondor {
+  margin-bottom: 20px;
+}
+/*--------------------------------------------------------------
+# Codigo
+--------------------------------------------------------------*/
+#codigo {
+  width: 100%;
+  background: url("../img/bg.jpeg") bottom center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#codigo p {
+  text-transform: uppercase;
+}
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+.mobileview {
+  display: none!important;
+}
+#ceremonia .info {
+  border-radius: 10px 0 0 10px;
+}
+.mapa iframe {
+  border-radius: 0 10px 10px 0; 
+}
+#recepcion iframe {
+  border-radius: 10px 0 0 10px;
+}
+
+@media (max-width: 991px) {
+  #contact .mt-5 {
+    margin-top: 0rem!important;
+  }
+  .mesas {
+    margin-bottom: 20px;
+  }
+  .mobileview {
+    display: block!important;
+  }
+  .webview {
+    display: none!important;
+  }
+  #ceremonia .info {
+    border-radius: 10px 10px 0 0;
+  }
+  .mapa iframe {
+    border-radius: 0 0 10px 10px; 
+  }
+  #recepcion iframe {
+    border-radius: 0 0 10px 10px; 
+  }
+  #hero h1 {
+    font-size: 80px;
+  }
+  #hero h3 {
+    margin-top: 20px;
+  }
+  #hero h2 {
+    font-size: 54px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  #hero .countdown div {
+    width: 150px;
+  }
+}
+@media (max-width: 680px) {
+  #hero h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+    line-height: 90px;
+  }
+  #hero h3 {
+    font-size: 17.5px;
+    margin-top: 10px;
+  }
+  #hero h2 {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .minutos, .segundos {
+    display: none;
+  }
+  .mesaregalos h3, #hashtag h3 {
+    letter-spacing: 3px;
+  }
+  #confirmacion h3 {
+    font-size: 30px;
+  }
+  .nopadding .col-lg-6 {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 370px) {
+  #hero h1 {
+    font-size: 38px;
+  }
+  #hero h3 {
+    font-size: 14.5px!important;
+  }
+  #hero h2 {
+    font-size: 29px;
+  }
+  #hero .countdown div {
+    width: 130px;
+  }
+  .mesaregalos h3, #hashtag h3 {
+    font-size: 30px;
+  }
+}
