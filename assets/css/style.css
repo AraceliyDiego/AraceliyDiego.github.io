@@ -246,7 +246,7 @@ section {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: .35;
+  opacity: .45;
 }
 
 #contact > * {
@@ -324,7 +324,7 @@ section {
   margin-top: 0px;
 }
 
-.mesas a {
+.mesas a.btncard {
   color: #3F0B01;
   text-transform: uppercase;
   font-size: 14px;
@@ -334,7 +334,7 @@ section {
   padding: 5px 20px;
 }
 
-.mesas a:hover {
+.mesas a.btncard:hover {
   color: white;
   background: #3F0B01;
 }
